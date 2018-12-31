@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complexity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/JS.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="mainHeader">Calculate Complexity For One Code Or Compare Two Codes</header>
+        <main>
+            <div class="menu">
+                <ul id="sideMenu">
+                    <li onclick=changPage(infoBox) class="menuItems" id="Info">Information</li>
+                    <li onclick=changPage(calcBox) class="menuItems" id="calc">Clculate Complexity</li>
+                    <li onclick=changPage(compBox) class="menuItems" id="comp">Cmpare Codes</li>
+                    <li onclick=changPage(resBox) class="menuItems" id="res">Show Result</li>
+                </ul>
+                <ul class="chooseLang">
+                    <div>Choose Language</div>
+                    <li id="Python3" onclick="langu(0)">Python3</li>
+                    <li id="C" onclick="langu(1)">C</li>
+                    <li id="CPP" onclick="langu(2)">C++</li>
+                </ul>
+            </div>
+            <div id="pages">
+                <div class="boxs" id="infoBox">
+                    با استفاده از صفحه دوم می توانید پیچیدگی یک کد را محاسبه کنید و از طریق صفحه سوم می توانید پیچیدگی دو کد را با هم مقایسه کنید.
+                    به یاد داشته باشید دستور نهایی شما برای محاسبه باید به صورت زیر باشد:
+                   <span class="LTR">printf("*")</span>
+                   به عبارت دیگر محاسبات بر اساس خروجی * انجام خواهد شد. نکته دیگر این است که نیازی به وارد کردن کتابخانه های نمایش در سی و سی پلاس پلاس نیست.
+                   و آخرین نکته هم این است که کد شما باید وابسته به متغیر n باشد که مقدار دهی نشده باشد  و باید تنها به همین متغیر وابته باشد.
+                    درنهایت در صفحه چهارم می توانید نتیجه را مشاهده کنید.
+                </div>
+                <div class="boxs" id="calcBox">
+                    <textarea id="calcOne" placeholder="Write Your Code Here ..."></textarea>
+                    <button onclick="calculate(calcOne,0)">Calculate</button>
+                </div>
+                <div class="boxs" id="compBox">
+                    <textarea id="compOne" placeholder="Write Your First Code Here ..."></textarea>
+                    <button onclick="Compare()">Compare</button>
+                    <textarea id="compTwo" placeholder="Write Your Second Code Here ..."></textarea>
+                </div>
+                <div class="boxs" id="resBox">
+                    <div id="result">
+                        <div id="final--result"> 
+                            <div class="loading-circle" id="loading-Box">
+                                <div class="loading1 loading"></div>
+                                <div class="loading2 loading"></div>
+                                <div class="loading3 loading"></div>
+                                <div class="loading4 loading"></div>
+                                <div class="loading5 loading"></div>
+                                <div class="loading6 loading"></div>
+                                <div class="loading7 loading"></div>
+                                <div class="loading8 loading"></div>
+                                <div class="loading9 loading"></div>
+                                <div class="loading10 loading"></div>
+                                <div class="loading11 loading"></div>
+                                <div class="loading12 loading"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="show-result"></div>
+                </div>
+            </div>
+        </main>
+        <footer id="mainFooter">- - - - - - - - Hope To Be Usefull ( ^ _ ^ ) - - - - - - - -</footer>
+    </div>
+</body>
+</html>
